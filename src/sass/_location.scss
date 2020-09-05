@@ -230,26 +230,24 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1200px) {
   // Картинка с пузырями
   .location {
     margin-top: 107px;
     background-image: url('../images/location/bubbles.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top 120px;
   }
   .location-container {
     top: -106px;
-    width: 1280px;
-    padding-left: 115px;
-    padding-right: 115px;
+    width: 1200px;
+    padding-left: 75px;
+    padding-right: 75px;
   }
 
   .location-place {
     font-size: 16px;
     justify-content: space-between;
-    margin-bottom: 86px;
   }
   .location-place-item {
     min-width: 330px;
@@ -288,5 +286,12 @@
   }
   .location-btn-franchise {
     width: 180px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .location-container {
+    width: 1280px;
+    padding-left: 115px;
+    padding-right: 115px;
   }
 }
