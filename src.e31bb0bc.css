@@ -463,6 +463,9 @@ button {
   padding-top: 13px;
   padding-bottom: 11px;
 }
+.navigation-item-link:hover, .navigation-item-link:focus {
+  color: #D41443;
+}
 
 .nav-item-active {
   color: #D41443;
@@ -529,6 +532,9 @@ button {
 
   .navigation-item-link {
     padding-left: 24px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.286;
   }
 
   .header-btn {
@@ -709,7 +715,7 @@ button {
   background-image: url("/mobile-icecream.e5cb180e.png"), url("/mobile-pink-circle.22808527.png");
   background-size: 171px, 284px;
   background-repeat: no-repeat;
-  background-position: bottom 0px right 32px, right 0px top 97px;
+  background-position: bottom 0px right 32px, right 0px top 86px;
 }
 
 @media screen and (max-width: 767px) {
@@ -1532,6 +1538,7 @@ button {
 }
 
 .person-photo1 {
+  width: 85px;
   margin: 0 auto;
   margin-bottom: 29px;
 }
@@ -1781,6 +1788,7 @@ button {
 
 .location-place-item-container-about {
   line-height: 1.5;
+  letter-spacing: normal;
   color: #907E82;
 }
 
@@ -1844,7 +1852,7 @@ button {
   }
 
   .location-place-item {
-    width: 220px;
+    max-width: 220px;
     padding: 43px 20px;
   }
   .location-place-item:not(:last-child) {
@@ -1906,6 +1914,7 @@ button {
 @media screen and (max-width: 1279px) and (min-width: 768px) {
   .location {
     margin-top: 107px;
+    padding-bottom: 158px;
   }
 
   .location-container {
@@ -1969,6 +1978,7 @@ button {
 @media screen and (min-width: 1200px) {
   .location {
     margin-top: 107px;
+    padding-bottom: 165px;
     background-image: url("/bubbles.570c6005.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -2012,6 +2022,7 @@ button {
 
   .location-place-item-container-about {
     line-height: 1.812;
+    letter-spacing: 0.04em;
   }
 
   .location-place-item-container,
@@ -2074,7 +2085,7 @@ footer.container {
   margin-bottom: 17px;
   font-family: "Titan One", cursive;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.17;
   font-style: normal;
   text-transform: uppercase;
@@ -2085,7 +2096,7 @@ footer.container {
     margin-top: 12px;
     margin-bottom: 16px;
     font-size: 26px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.15;
     letter-spacing: 0.04em;
   }
@@ -2096,7 +2107,7 @@ footer.container {
     margin-top: 9px;
     margin-bottom: 15px;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 1.133;
     letter-spacing: 0.04em;
   }
