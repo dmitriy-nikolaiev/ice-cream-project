@@ -63,6 +63,7 @@
 //стилизация текста о кафе
 .location-place-item-container-about {
   line-height: 1.5;
+  letter-spacing: normal;
   color: $section-text;
 }
 
@@ -133,7 +134,7 @@
     margin-bottom: 54px;
   }
   .location-place-item {
-    width: 220px;
+    max-width: 220px;
     padding: 43px 20px;
 
     &:not(:last-child) {
@@ -191,6 +192,7 @@
 @media screen and (max-width: 1279px) and (min-width: 768px) {
   .location {
     margin-top: 107px;
+    padding-bottom: 158px;
   }
 
   .location-container {
@@ -245,6 +247,7 @@
   // Картинка с пузырями
   .location {
     margin-top: 107px;
+    padding-bottom: 165px;
     background-image: url('../images/location/bubbles.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -279,6 +282,7 @@
   }
   .location-place-item-container-about {
     line-height: 1.812;
+    letter-spacing: 0.04em;
   }
   .location-place-item-container,
   .location-place-item-tametable {

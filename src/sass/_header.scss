@@ -19,6 +19,11 @@
   color: #ffffff;
   padding-top: 13px;
   padding-bottom: 11px;
+
+  &:hover,
+  &:focus {
+    color: $main-title-color;
+  }
 }
 
 .nav-item-active {
@@ -93,6 +98,7 @@
 
   .navigation-item-link {
     padding-left: 24px;
+    @include font(14px, 700, 1.286);
   }
 
   .header-btn {
