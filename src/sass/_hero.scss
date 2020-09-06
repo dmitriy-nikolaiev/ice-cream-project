@@ -8,6 +8,7 @@
     }
 
 .title-start {
+    display: block;
     font-family: Titan One;
     @include font ($fs:26px, $fw: 400, $lh: 1.154);
     letter-spacing: 0.04em;
@@ -90,7 +91,7 @@
  // TABLET
 @media screen and (min-width: 768px) {
     .hero-container {
-        padding-top: 96px;
+        padding-top: 98px;
         padding-bottom: 34px;
         background-image: 
         url("../images/hero/tablet-icecream.png"),
@@ -99,7 +100,7 @@
         url("../images/hero/tablet-milk-carafe.png");
         background-size: 143px, 168px, 324px, 124px;
         background-repeat: no-repeat;
-        background-position: bottom 0px left 370px, bottom 0px right 34px, bottom 46px right 137px, bottom 28px left 40px;
+        background-position: bottom 0px left 390px, bottom 0px right 30px, bottom 47px right 127px, bottom 28px left 35px;
     }
 
     .presentation {
@@ -112,7 +113,7 @@
         }
 
     .title-start {
-        @include font ($fs:22px, $fw: 400, $lh: 1.136);
+        @include font ($fs:22px, $fw:400, $lh:1.136);
     }
     
     .title-main-word {
@@ -131,7 +132,7 @@
         width: 114px;
         height: 48px;
         margin-left: 120px;
-        margin-bottom: 20px;
+        margin-bottom: 7px;
     }
 
     .facilities-block {
@@ -178,6 +179,8 @@
 
     .hero-arrow {
         stroke:$main-title-color;
+        width:18px; 
+        height:18px;
     }
 
     .arrow-link {
@@ -197,7 +200,7 @@
         url("../images/hero/desktop-milk-carafe.png");
         background-size: 236px, 293px, 538px, 188px;
         background-repeat: no-repeat;
-        background-position: bottom 0px left 594px, bottom 0px right 110px, top 52px right 269px, bottom 56px left 75px;
+        background-position: bottom -5px left 558px, bottom 0px right 75px, top 55px right 225px, bottom 56px left 40px;
     }
 
     .presentation {
@@ -312,6 +315,8 @@
 
     .hero-arrow {
         stroke:$main-title-color;
+        width:26px; 
+        height:26px;
     }
 
     .arrow-link {
