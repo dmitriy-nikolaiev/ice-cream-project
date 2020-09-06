@@ -98,7 +98,13 @@
     margin-left: 10px;
     background-image: url('../images/location/Arrow-for-pink.svg');
   }
+
+  &:hover,
+  &:focus {
+    background-color: #c7133e;
+  }
 }
+
 .location-btn-franchise {
   display: flex;
   justify-content: center;
@@ -113,6 +119,11 @@
     margin-top: 3px;
     margin-left: 10px;
     background-image: url('../images/location/Arrow-for-white.svg');
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #ecebeb;
   }
 }
 
