@@ -63,6 +63,7 @@
 //стилизация текста о кафе
 .location-place-item-container-about {
   line-height: 1.5;
+  letter-spacing: normal;
   color: $section-text;
 }
 
@@ -133,7 +134,7 @@
     margin-bottom: 54px;
   }
   .location-place-item {
-    width: 220px;
+    max-width: 220px;
     padding: 43px 20px;
 
     &:not(:last-child) {
@@ -279,6 +280,7 @@
   }
   .location-place-item-container-about {
     line-height: 1.812;
+    letter-spacing: 0.04em;
   }
   .location-place-item-container,
   .location-place-item-tametable {
