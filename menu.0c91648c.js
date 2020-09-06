@@ -117,83 +117,18 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\hero\\mobile-icecream.png":[["mobile-icecream.e5cb180e.png","images/hero/mobile-icecream.png"],"images/hero/mobile-icecream.png"],"./..\\images\\hero\\mobile-pink-circle.png":[["mobile-pink-circle.22808527.png","images/hero/mobile-pink-circle.png"],"images/hero/mobile-pink-circle.png"],"./..\\images\\hero\\tablet-icecream.png":[["tablet-icecream.cbbb31fa.png","images/hero/tablet-icecream.png"],"images/hero/tablet-icecream.png"],"./..\\images\\hero\\tablet-girl.png":[["tablet-girl.f955de16.png","images/hero/tablet-girl.png"],"images/hero/tablet-girl.png"],"./..\\images\\hero\\tablet-pink-circle.png":[["tablet-pink-circle.c287b3d0.png","images/hero/tablet-pink-circle.png"],"images/hero/tablet-pink-circle.png"],"./..\\images\\hero\\tablet-milk-carafe.png":[["tablet-milk-carafe.b2d2ad43.png","images/hero/tablet-milk-carafe.png"],"images/hero/tablet-milk-carafe.png"],"./..\\images\\hero\\desktop-icecream.png":[["desktop-icecream.496d7e08.png","images/hero/desktop-icecream.png"],"images/hero/desktop-icecream.png"],"./..\\images\\hero\\desktop-girl.png":[["desktop-girl.e842c13a.png","images/hero/desktop-girl.png"],"images/hero/desktop-girl.png"],"./..\\images\\hero\\desktop-pink-circle.png":[["desktop-pink-circle.f88d3544.png","images/hero/desktop-pink-circle.png"],"images/hero/desktop-pink-circle.png"],"./..\\images\\hero\\desktop-milk-carafe.png":[["desktop-milk-carafe.d13589ec.png","images/hero/desktop-milk-carafe.png"],"images/hero/desktop-milk-carafe.png"],"./..\\images\\how-its-made\\mobile\\mobile-how-made-2.png":[["mobile-how-made-2.f8c5dc50.png","images/how-its-made/mobile/mobile-how-made-2.png"],"images/how-its-made/mobile/mobile-how-made-2.png"],"./..\\images\\how-its-made\\desktop\\desktop-how-made-2.png":[["desktop-how-made-2.c18410e7.png","images/how-its-made/desktop/desktop-how-made-2.png"],"images/how-its-made/desktop/desktop-how-made-2.png"],"./..\\images\\location\\Arrow-for-pink.svg":[["Arrow-for-pink.ec6ae505.svg","images/location/Arrow-for-pink.svg"],"images/location/Arrow-for-pink.svg"],"./..\\images\\location\\Arrow-for-white.svg":[["Arrow-for-white.8d497ab6.svg","images/location/Arrow-for-white.svg"],"images/location/Arrow-for-white.svg"],"./..\\images\\location\\bubbles.png":[["bubbles.570c6005.png","images/location/bubbles.png"],"images/location/bubbles.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+})({"js/menu.js":[function(require,module,exports) {
+(function () {
+  var menuBtnRef = document.querySelector("[data-menu-button]");
+  var mobileMenuRef = document.querySelector("[data-menu]");
+  menuBtnRef.addEventListener("click", function () {
+    var expanded = menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+    menuBtnRef.classList.toggle("is-open");
+    menuBtnRef.setAttribute("aria-expanded", !expanded);
+    mobileMenuRef.classList.toggle("is-open");
+  });
+})();
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +332,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/menu.js"], null)
+//# sourceMappingURL=/menu.0c91648c.js.map

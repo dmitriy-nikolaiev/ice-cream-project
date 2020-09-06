@@ -184,16 +184,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\hero\\mobile-icecream.png":[["mobile-icecream.e5cb180e.png","images/hero/mobile-icecream.png"],"images/hero/mobile-icecream.png"],"./..\\images\\hero\\mobile-pink-circle.png":[["mobile-pink-circle.22808527.png","images/hero/mobile-pink-circle.png"],"images/hero/mobile-pink-circle.png"],"./..\\images\\hero\\tablet-icecream.png":[["tablet-icecream.cbbb31fa.png","images/hero/tablet-icecream.png"],"images/hero/tablet-icecream.png"],"./..\\images\\hero\\tablet-girl.png":[["tablet-girl.f955de16.png","images/hero/tablet-girl.png"],"images/hero/tablet-girl.png"],"./..\\images\\hero\\tablet-pink-circle.png":[["tablet-pink-circle.c287b3d0.png","images/hero/tablet-pink-circle.png"],"images/hero/tablet-pink-circle.png"],"./..\\images\\hero\\tablet-milk-carafe.png":[["tablet-milk-carafe.b2d2ad43.png","images/hero/tablet-milk-carafe.png"],"images/hero/tablet-milk-carafe.png"],"./..\\images\\hero\\desktop-icecream.png":[["desktop-icecream.496d7e08.png","images/hero/desktop-icecream.png"],"images/hero/desktop-icecream.png"],"./..\\images\\hero\\desktop-girl.png":[["desktop-girl.e842c13a.png","images/hero/desktop-girl.png"],"images/hero/desktop-girl.png"],"./..\\images\\hero\\desktop-pink-circle.png":[["desktop-pink-circle.f88d3544.png","images/hero/desktop-pink-circle.png"],"images/hero/desktop-pink-circle.png"],"./..\\images\\hero\\desktop-milk-carafe.png":[["desktop-milk-carafe.d13589ec.png","images/hero/desktop-milk-carafe.png"],"images/hero/desktop-milk-carafe.png"],"./..\\images\\how-its-made\\mobile\\mobile-how-made-2.png":[["mobile-how-made-2.f8c5dc50.png","images/how-its-made/mobile/mobile-how-made-2.png"],"images/how-its-made/mobile/mobile-how-made-2.png"],"./..\\images\\how-its-made\\desktop\\desktop-how-made-2.png":[["desktop-how-made-2.c18410e7.png","images/how-its-made/desktop/desktop-how-made-2.png"],"images/how-its-made/desktop/desktop-how-made-2.png"],"./..\\images\\location\\Arrow-for-pink.svg":[["Arrow-for-pink.ec6ae505.svg","images/location/Arrow-for-pink.svg"],"images/location/Arrow-for-pink.svg"],"./..\\images\\location\\Arrow-for-white.svg":[["Arrow-for-white.8d497ab6.svg","images/location/Arrow-for-white.svg"],"images/location/Arrow-for-white.svg"],"./..\\images\\location\\bubbles.png":[["bubbles.570c6005.png","images/location/bubbles.png"],"images/location/bubbles.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -221,7 +212,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65441" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57517" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -397,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+//# sourceMappingURL=/index.js.map
